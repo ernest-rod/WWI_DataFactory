@@ -1,0 +1,61 @@
+{
+	"name": "StateProvinces_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "StateProvinces.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "StateProvinceID",
+				"type": "String"
+			},
+			{
+				"name": "StateProvinceCode",
+				"type": "String"
+			},
+			{
+				"name": "StateProvinceName",
+				"type": "String"
+			},
+			{
+				"name": "CountryID",
+				"type": "String"
+			},
+			{
+				"name": "SalesTerritory",
+				"type": "String"
+			},
+			{
+				"name": "LatestRecordedPopulation",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "ValidFrom",
+				"type": "String"
+			},
+			{
+				"name": "ValidTo",
+				"type": "String"
+			}
+		]
+	}
+}
