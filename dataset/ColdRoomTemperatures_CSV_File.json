@@ -1,0 +1,51 @@
+{
+	"name": "ColdRoomTemperatures_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ColdRoomTemperatures.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"nullValue": "NULL",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ColdRoomTemperatureID",
+				"type": "String"
+			},
+			{
+				"name": "ColdRoomSensorNumber",
+				"type": "String"
+			},
+			{
+				"name": "RecordedWhen",
+				"type": "String"
+			},
+			{
+				"name": "Temperature",
+				"type": "String"
+			},
+			{
+				"name": "ValidFrom",
+				"type": "String"
+			},
+			{
+				"name": "ValidTo",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

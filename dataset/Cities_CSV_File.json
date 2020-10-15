@@ -1,0 +1,58 @@
+{
+	"name": "Cities_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Cities.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CityID",
+				"type": "String"
+			},
+			{
+				"name": "CityName",
+				"type": "String"
+			},
+			{
+				"name": "StateProvinceID",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "LatestRecordedPopulation",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "ValidFrom",
+				"type": "String"
+			},
+			{
+				"name": "ValidTo",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
