@@ -1,0 +1,89 @@
+{
+	"name": "Orders_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Orders.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "OrderID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "SalespersonPersonID",
+				"type": "String"
+			},
+			{
+				"name": "PickedByPersonID",
+				"type": "String"
+			},
+			{
+				"name": "ContactPersonID",
+				"type": "String"
+			},
+			{
+				"name": "BackorderOrderID",
+				"type": "String"
+			},
+			{
+				"name": "OrderDate",
+				"type": "String"
+			},
+			{
+				"name": "ExpectedDeliveryDate",
+				"type": "String"
+			},
+			{
+				"name": "CustomerPurchaseOrderNumber",
+				"type": "String"
+			},
+			{
+				"name": "IsUndersupplyBackordered",
+				"type": "String"
+			},
+			{
+				"name": "Comments",
+				"type": "String"
+			},
+			{
+				"name": "DeliveryInstructions",
+				"type": "String"
+			},
+			{
+				"name": "InternalComments",
+				"type": "String"
+			},
+			{
+				"name": "PickingCompletedWhen",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedWhen",
+				"type": "String"
+			}
+		]
+	}
+}
