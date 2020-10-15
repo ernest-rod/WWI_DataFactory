@@ -1,0 +1,81 @@
+{
+	"name": "SpecialDeals_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "SpecialDeals.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SpecialDealID",
+				"type": "String"
+			},
+			{
+				"name": "StockItemID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "BuyingGroupID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerCategoryID",
+				"type": "String"
+			},
+			{
+				"name": "StockGroupID",
+				"type": "String"
+			},
+			{
+				"name": "DealDescription",
+				"type": "String"
+			},
+			{
+				"name": "StartDate",
+				"type": "String"
+			},
+			{
+				"name": "EndDate",
+				"type": "String"
+			},
+			{
+				"name": "DiscountAmount",
+				"type": "String"
+			},
+			{
+				"name": "DiscountPercentage",
+				"type": "String"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedWhen",
+				"type": "String"
+			}
+		]
+	}
+}

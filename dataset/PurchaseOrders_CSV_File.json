@@ -1,0 +1,73 @@
+{
+	"name": "PurchaseOrders_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "PurchaseOrders.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PurchaseOrderID",
+				"type": "String"
+			},
+			{
+				"name": "SupplierID",
+				"type": "String"
+			},
+			{
+				"name": "OrderDate",
+				"type": "String"
+			},
+			{
+				"name": "DeliveryMethodID",
+				"type": "String"
+			},
+			{
+				"name": "ContactPersonID",
+				"type": "String"
+			},
+			{
+				"name": "ExpectedDeliveryDate",
+				"type": "String"
+			},
+			{
+				"name": "SupplierReference",
+				"type": "String"
+			},
+			{
+				"name": "IsOrderFinalized",
+				"type": "String"
+			},
+			{
+				"name": "Comments",
+				"type": "String"
+			},
+			{
+				"name": "InternalComments",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedWhen",
+				"type": "String"
+			}
+		]
+	}
+}
