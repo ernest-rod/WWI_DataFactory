@@ -1,0 +1,121 @@
+{
+	"name": "Invoices_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Invoices.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "InvoiceID",
+				"type": "String"
+			},
+			{
+				"name": "CustomerID",
+				"type": "String"
+			},
+			{
+				"name": "BillToCustomerID",
+				"type": "String"
+			},
+			{
+				"name": "OrderID",
+				"type": "String"
+			},
+			{
+				"name": "DeliveryMethodID",
+				"type": "String"
+			},
+			{
+				"name": "ContactPersonID",
+				"type": "String"
+			},
+			{
+				"name": "AccountsPersonID",
+				"type": "String"
+			},
+			{
+				"name": "SalespersonPersonID",
+				"type": "String"
+			},
+			{
+				"name": "PackedByPersonID",
+				"type": "String"
+			},
+			{
+				"name": "InvoiceDate",
+				"type": "String"
+			},
+			{
+				"name": "CustomerPurchaseOrderNumber",
+				"type": "String"
+			},
+			{
+				"name": "IsCreditNote",
+				"type": "String"
+			},
+			{
+				"name": "CreditNoteReason",
+				"type": "String"
+			},
+			{
+				"name": "Comments",
+				"type": "String"
+			},
+			{
+				"name": "DeliveryInstructions",
+				"type": "String"
+			},
+			{
+				"name": "InternalComments",
+				"type": "String"
+			},
+			{
+				"name": "TotalDryItems",
+				"type": "String"
+			},
+			{
+				"name": "TotalChillerItems",
+				"type": "String"
+			},
+			{
+				"name": "DeliveryRun",
+				"type": "String"
+			},
+			{
+				"name": "RunPosition",
+				"type": "String"
+			},
+			{
+				"name": "ConfirmedDeliveryTime",
+				"type": "String"
+			},
+			{
+				"name": "ConfirmedReceivedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedWhen",
+				"type": "String"
+			}
+		]
+	}
+}
