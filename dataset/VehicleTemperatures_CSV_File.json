@@ -1,0 +1,53 @@
+{
+	"name": "VehicleTemperatures_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "VehicleTemperatures.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "VehicleTemperatureID",
+				"type": "String"
+			},
+			{
+				"name": "VehicleRegistration",
+				"type": "String"
+			},
+			{
+				"name": "ChillerSensorNumber",
+				"type": "String"
+			},
+			{
+				"name": "RecordedWhen",
+				"type": "String"
+			},
+			{
+				"name": "Temperature",
+				"type": "String"
+			},
+			{
+				"name": "IsCompressed",
+				"type": "String"
+			},
+			{
+				"name": "CompressedSensorData",
+				"type": "String"
+			}
+		]
+	}
+}

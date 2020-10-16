@@ -1,0 +1,85 @@
+{
+	"name": "SupplierTransactions_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "SupplierTransactions.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SupplierTransactionID",
+				"type": "String"
+			},
+			{
+				"name": "SupplierID",
+				"type": "String"
+			},
+			{
+				"name": "TransactionTypeID",
+				"type": "String"
+			},
+			{
+				"name": "PurchaseOrderID",
+				"type": "String"
+			},
+			{
+				"name": "PaymentMethodID",
+				"type": "String"
+			},
+			{
+				"name": "SupplierInvoiceNumber",
+				"type": "String"
+			},
+			{
+				"name": "TransactionDate",
+				"type": "String"
+			},
+			{
+				"name": "AmountExcludingTax",
+				"type": "String"
+			},
+			{
+				"name": "TaxAmount",
+				"type": "String"
+			},
+			{
+				"name": "TransactionAmount",
+				"type": "String"
+			},
+			{
+				"name": "OutstandingBalance",
+				"type": "String"
+			},
+			{
+				"name": "FinalizationDate",
+				"type": "String"
+			},
+			{
+				"name": "IsFinalized",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedWhen",
+				"type": "String"
+			}
+		]
+	}
+}
