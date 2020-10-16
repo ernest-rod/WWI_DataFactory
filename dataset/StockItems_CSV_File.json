@@ -1,0 +1,117 @@
+{
+	"name": "StockItems_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "StockItems.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "StockItemID",
+				"type": "String"
+			},
+			{
+				"name": "StockItemName",
+				"type": "String"
+			},
+			{
+				"name": "SupplierID",
+				"type": "String"
+			},
+			{
+				"name": "ColorID",
+				"type": "String"
+			},
+			{
+				"name": "UnitPackageID",
+				"type": "String"
+			},
+			{
+				"name": "OuterPackageID",
+				"type": "String"
+			},
+			{
+				"name": "Brand",
+				"type": "String"
+			},
+			{
+				"name": "Size",
+				"type": "String"
+			},
+			{
+				"name": "LeadTimeDays",
+				"type": "String"
+			},
+			{
+				"name": "QuantityPerOuter",
+				"type": "String"
+			},
+			{
+				"name": "IsChillerStock",
+				"type": "String"
+			},
+			{
+				"name": "Barcode",
+				"type": "String"
+			},
+			{
+				"name": "TaxRate",
+				"type": "String"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "String"
+			},
+			{
+				"name": "RecommendedRetailPrice",
+				"type": "String"
+			},
+			{
+				"name": "TypicalWeightPerUnit",
+				"type": "String"
+			},
+			{
+				"name": "MarketingComments",
+				"type": "String"
+			},
+			{
+				"name": "InternalComments",
+				"type": "String"
+			},
+			{
+				"name": "Photo",
+				"type": "String"
+			},
+			{
+				"name": "SearchDetails",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "ValidFrom",
+				"type": "String"
+			},
+			{
+				"name": "ValidTo",
+				"type": "String"
+			}
+		]
+	}
+}

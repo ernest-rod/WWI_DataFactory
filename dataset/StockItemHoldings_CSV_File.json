@@ -1,0 +1,61 @@
+{
+	"name": "StockItemHoldings_CSV_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_Data_Files",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "StockItemHoldings.csv",
+				"folderPath": "PU-WWI-REG",
+				"container": "inbounddatafiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "StockItemID",
+				"type": "String"
+			},
+			{
+				"name": "QuantityOnHand",
+				"type": "String"
+			},
+			{
+				"name": "BinLocation",
+				"type": "String"
+			},
+			{
+				"name": "LastStocktakeQuantity",
+				"type": "String"
+			},
+			{
+				"name": "LastCostPrice",
+				"type": "String"
+			},
+			{
+				"name": "ReorderLevel",
+				"type": "String"
+			},
+			{
+				"name": "TargetStockLevel",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedBy",
+				"type": "String"
+			},
+			{
+				"name": "LastEditedWhen",
+				"type": "String"
+			}
+		]
+	}
+}
