@@ -99,18 +99,15 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlMISource",
+						"sqlReaderQuery": {
+							"value": "SELECT EventID FROM dbo.get_event_id( @{pipeline().parameters.UnitID} )",
+							"type": "Expression"
+						},
 						"partitionOption": "None"
 					},
 					"dataset": {
 						"referenceName": "AzureSqlMI_Poseidon_Query",
-						"type": "DatasetReference",
-						"parameters": {
-							"Schema": "dbo",
-							"Query": {
-								"value": "@CONCAT( 'get_event_id', '(', string(pipeline().parameters.UnitID), ')' )",
-								"type": "Expression"
-							}
-						}
+						"type": "DatasetReference"
 					}
 				}
 			}
