@@ -5,14 +5,7 @@
 			{
 				"name": "Data Loader",
 				"type": "ExecuteDataFlow",
-				"dependsOn": [
-					{
-						"activity": "Register Event",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -30,55 +23,6 @@
 						"coreCount": 8,
 						"computeType": "General"
 					}
-				}
-			},
-			{
-				"name": "Register Event",
-				"type": "SqlServerStoredProcedure",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"storedProcedureName": "[dbo].[register_event]",
-					"storedProcedureParameters": {
-						"description": {
-							"value": "Register Initial Event of Process",
-							"type": "String"
-						},
-						"event_id": {
-							"value": "",
-							"type": "Int32"
-						},
-						"is_error": {
-							"value": "0",
-							"type": "Boolean"
-						},
-						"parent_id": {
-							"value": null,
-							"type": "Int32"
-						},
-						"reporter": {
-							"value": {
-								"value": "@pipeline().DataFactory",
-								"type": "Expression"
-							},
-							"type": "String"
-						},
-						"unit_id": {
-							"value": "1",
-							"type": "Int32"
-						}
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureSqlM_Poseidon",
-					"type": "LinkedServiceReference"
 				}
 			}
 		],
