@@ -7,7 +7,7 @@
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
-						"activity": "Stored procedure1",
+						"activity": "Register Event",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -33,7 +33,7 @@
 				}
 			},
 			{
-				"name": "Stored procedure1",
+				"name": "Register Event",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [],
 				"policy": {
