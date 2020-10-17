@@ -1,0 +1,15 @@
+{
+	"name": "AzureSqlMI_Poseidon_Query",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlM_Poseidon",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlMITable",
+		"schema": [],
+		"typeProperties": {
+			"schema": ""
+		}
+	}
+}
