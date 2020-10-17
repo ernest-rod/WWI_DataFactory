@@ -24,6 +24,51 @@
 						"computeType": "General"
 					}
 				}
+			},
+			{
+				"name": "Register Event",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[register_event]",
+					"storedProcedureParameters": {
+						"description": {
+							"value": "",
+							"type": "String"
+						},
+						"is_error": {
+							"value": "",
+							"type": "Boolean"
+						},
+						"parent_id": {
+							"value": "",
+							"type": "Int32"
+						},
+						"reporter": {
+							"value": {
+								"value": "@CONCAT( pipeline().DataFactory, '.', pipeline().Pipeline)",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"unit_id": {
+							"value": "1",
+							"type": "Int32"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlM_Poseidon",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
