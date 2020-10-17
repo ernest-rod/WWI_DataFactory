@@ -1,0 +1,20 @@
+{
+	"name": "Load Data Into Stage Area",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "BuyingGroups_CSV_FIle",
+						"type": "DatasetReference"
+					},
+					"name": "BuyingGroups"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(output(\n\t\tBuyingGroupID as string,\n\t\tBuyingGroupName as string,\n\t\tLastEditedBy as string,\n\t\tValidFrom as string,\n\t\tValidTo as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> BuyingGroups"
+		}
+	}
+}
