@@ -99,10 +99,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlMISource",
-						"sqlReaderQuery": {
-							"value": "SELECT CONCAT( 'dbo.get_event_id', '(', '1', ')' )",
-							"type": "Expression"
-						},
 						"partitionOption": "None"
 					},
 					"dataset": {
