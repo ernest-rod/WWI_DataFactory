@@ -5,7 +5,14 @@
 			{
 				"name": "Data Loader",
 				"type": "ExecuteDataFlow",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -69,11 +76,48 @@
 					"referenceName": "AzureSqlM_Poseidon",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Lookup1",
+				"type": "Lookup",
+				"dependsOn": [
+					{
+						"activity": "Register Event",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlMISource",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AzureSqlMI_Poseidon_Query",
+						"type": "DatasetReference",
+						"parameters": {
+							"Schema": "dbo",
+							"Query": "get_event_id("
+						}
+					}
+				}
 			}
 		],
 		"parameters": {
 			"ProcessingDate": {
 				"type": "string"
+			},
+			"UnitID": {
+				"type": "int"
 			}
 		},
 		"annotations": []
