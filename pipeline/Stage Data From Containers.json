@@ -7,7 +7,7 @@
 				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Get Event ID",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -78,7 +78,7 @@
 				}
 			},
 			{
-				"name": "Lookup1",
+				"name": "Get Event ID",
 				"type": "Lookup",
 				"dependsOn": [
 					{
