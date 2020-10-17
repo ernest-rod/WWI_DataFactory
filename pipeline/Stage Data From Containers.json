@@ -106,7 +106,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"Schema": "dbo",
-							"Query": "get_event_id("
+							"Query": {
+								"value": "@CONCAT( 'get_event_id', '(', string(pipeline().parameters.UnitID), ')' )",
+								"type": "Expression"
+							}
 						}
 					}
 				}
