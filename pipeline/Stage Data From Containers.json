@@ -43,7 +43,40 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[register_event]",
+					"storedProcedureParameters": {
+						"description": {
+							"value": "",
+							"type": "String"
+						},
+						"event_id": {
+							"value": "",
+							"type": "Int32"
+						},
+						"is_error": {
+							"value": "",
+							"type": "Boolean"
+						},
+						"parent_id": {
+							"value": "",
+							"type": "Int32"
+						},
+						"reporter": {
+							"value": "",
+							"type": "String"
+						},
+						"unit_id": {
+							"value": "",
+							"type": "Int32"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlM_Poseidon",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
