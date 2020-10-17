@@ -48,7 +48,7 @@
 					"storedProcedureName": "[dbo].[register_event]",
 					"storedProcedureParameters": {
 						"description": {
-							"value": "",
+							"value": "Register Initial Event of Process",
 							"type": "String"
 						},
 						"event_id": {
@@ -56,19 +56,22 @@
 							"type": "Int32"
 						},
 						"is_error": {
-							"value": "",
+							"value": "0",
 							"type": "Boolean"
 						},
 						"parent_id": {
-							"value": "",
+							"value": null,
 							"type": "Int32"
 						},
 						"reporter": {
-							"value": "",
+							"value": {
+								"value": "@pipeline().DataFactory",
+								"type": "Expression"
+							},
 							"type": "String"
 						},
 						"unit_id": {
-							"value": "",
+							"value": "1",
 							"type": "Int32"
 						}
 					}
