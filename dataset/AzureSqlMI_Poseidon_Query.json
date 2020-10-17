@@ -5,26 +5,8 @@
 			"referenceName": "AzureSqlM_Poseidon",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"Schema": {
-				"type": "string"
-			},
-			"Query": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "AzureSqlMITable",
-		"schema": [],
-		"typeProperties": {
-			"schema": {
-				"value": "@dataset().Schema",
-				"type": "Expression"
-			},
-			"table": {
-				"value": "@dataset().Query",
-				"type": "Expression"
-			}
-		}
+		"schema": []
 	}
 }
