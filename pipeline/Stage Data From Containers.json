@@ -41,15 +41,15 @@
 					"storedProcedureName": "[dbo].[register_event]",
 					"storedProcedureParameters": {
 						"description": {
-							"value": "",
+							"value": "Register Initial Process Event",
 							"type": "String"
 						},
 						"is_error": {
-							"value": "",
+							"value": "0",
 							"type": "Boolean"
 						},
 						"parent_id": {
-							"value": "",
+							"value": null,
 							"type": "Int32"
 						},
 						"reporter": {
