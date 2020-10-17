@@ -16,12 +16,9 @@
 			"transformations": [
 				{
 					"name": "AddMetadata"
-				},
-				{
-					"name": "Lookup1"
 				}
 			],
-			"script": "parameters{\n\tEventID as integer\n}\nsource(output(\n\t\tBuyingGroupID as string,\n\t\tBuyingGroupName as string,\n\t\tLastEditedBy as string,\n\t\tValidFrom as string,\n\t\tValidTo as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> BuyingGroups\nLookup1 derive(EventID = $EventID) ~> AddMetadata\nBuyingGroups lookup(ERROR_FUNCTION('') == ERROR_FUNCTION(''),\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> Lookup1"
+			"script": "parameters{\n\tEventID as integer\n}\nsource(output(\n\t\tBuyingGroupID as string,\n\t\tBuyingGroupName as string,\n\t\tLastEditedBy as string,\n\t\tValidFrom as string,\n\t\tValidTo as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> BuyingGroups\nBuyingGroups derive(EventID = $EventID) ~> AddMetadata"
 		}
 	}
 }
