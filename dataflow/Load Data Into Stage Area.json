@@ -18,7 +18,7 @@
 					"name": "DerivedColumn1"
 				}
 			],
-			"script": "parameters{\n\tInitialTimeStamp as timestamp\n}\nsource(output(\n\t\tBuyingGroupID as string,\n\t\tBuyingGroupName as string,\n\t\tLastEditedBy as string,\n\t\tValidFrom as string,\n\t\tValidTo as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> BuyingGroups\nBuyingGroups derive(column1 = ERROR_FUNCTION('')) ~> DerivedColumn1"
+			"script": "parameters{\n\tEventID as integer\n}\nsource(output(\n\t\tBuyingGroupID as string,\n\t\tBuyingGroupName as string,\n\t\tLastEditedBy as string,\n\t\tValidFrom as string,\n\t\tValidTo as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> BuyingGroups\nBuyingGroups derive(column1 = ERROR_FUNCTION('')) ~> DerivedColumn1"
 		}
 	}
 }
