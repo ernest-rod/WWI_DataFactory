@@ -26,6 +26,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"ProcessingDate": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
