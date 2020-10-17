@@ -100,7 +100,7 @@
 					"source": {
 						"type": "SqlMISource",
 						"sqlReaderQuery": {
-							"value": "SELECT CONCAT( 'dbo.get_event_id', '(', string(@pipeline().parameters.UnitID), ')' )",
+							"value": "SELECT CONCAT( 'dbo.get_event_id', '(', STRING(@{pipeline().parameters.UnitID}), ')' )",
 							"type": "Expression"
 						},
 						"partitionOption": "None"
